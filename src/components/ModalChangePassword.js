@@ -6,7 +6,7 @@ import {
   EuiModalBody,
   EuiModalFooter,
   EuiText,
-  EuiButtonEmpty
+  EuiButtonEmpty,
 } from "@elastic/eui";
 import { App } from "../App";
 
