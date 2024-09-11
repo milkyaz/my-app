@@ -3,15 +3,22 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   /* margin-top: 150px; */
 }
-.password__one{
+.modal__password {
+  /* padding: 50px; */
+  padding: 40px 0;
+}
+.password__one {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.password__first{
+.password__first {
   margin-bottom: 20px;
 }
-.password__text{
-  font-size: 10px;
+.password__text {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 5px;
 }

@@ -1,11 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { EuiProvider, EuiText } from "@elastic/eui";
-
+import ModalChangePassword from "./components/ModalChangePassword";
 import "@elastic/eui/dist/eui_theme_light.css";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      path="/"
+      id="root"
+      // loader={rootLoader}
+      // action={loginAction}
+      // element={<Root />}
+    >
+      <Route path="changepassword" element={<ModalChangePassword />} />
+    </Route>
+  )
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +31,7 @@ root.render(
     <EuiProvider colorMode="light">
       <EuiText>
         {" "}
-        <App />
+        <RouterProvider router={router} />
       </EuiText>
     </EuiProvider>
   </React.StrictMode>
